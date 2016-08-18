@@ -22,7 +22,7 @@ time.sleep(0.5)
 
 # PCA9537 address, 0x41(65)
 # Read data back from 0x00(00), 1 byte
-data = i2c.readBytes(0x41, 0x00)
+data = i2c.readBytes(0x41, 0x00, 1)
 
 # Convert the data to 4-bits
 data[0] = (data[0] & 0x0F)
